@@ -1,0 +1,150 @@
+/* Pengaturan dasar untuk body dan font */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right bottom, #d4fce6, #a8e6cf);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Kontainer utama aplikasi */
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Judul header */
+header h1 {
+    text-align: center;
+    color: #3d8f6d;
+    margin-bottom: 1.5rem;
+}
+
+/* Form untuk menambah todo */
+#todo-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Styling untuk input text dan date */
+#todo-input, #todo-date {
+    flex-grow: 1;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 0.7rem;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+#todo-input:focus, #todo-date:focus {
+    outline: none;
+    border-color: #a8e6cf;
+}
+
+/* Tombol tambah */
+.add-btn {
+    background: #3d8f6d;
+    color: white;
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.add-btn:hover {
+    background: #317357;
+}
+
+/* Styling untuk dropdown filter */
+.filter-container {
+    margin-bottom: 1rem;
+}
+
+#filter-todos {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('data:image/svg+xml;charset=US-ASCII,<svg width="12" height="12" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="%233d8f6d" d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+    background-size: 14px;
+    background-color: white;
+}
+
+/* Daftar todo */
+.todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Setiap item dalam daftar */
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+/* Styling text dan tanggal pada item */
+.todo-item .todo-content {
+    flex-grow: 1;
+}
+
+.todo-item .todo-content span {
+    display: block;
+}
+
+.todo-item .todo-content .todo-date {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 4px;
+}
+
+/* Styling saat task selesai */
+.todo-item.completed .todo-content {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+/* Tombol aksi (selesai dan hapus) */
+.todo-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+    transition: color 0.3s;
+}
+
+.complete-btn {
+    color: #28a745;
+}
+
+.complete-btn:hover {
+    color: #218838;
+}
+
+.delete-btn {
+    color: #dc3545;
+}
+
+.delete-btn:hover {
+    color: #c82333;
+}
